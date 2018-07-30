@@ -1,0 +1,30 @@
+﻿spring:
+  profiles:
+    active:
+      -dev
+---
+server:
+  prot:8201
+spring:
+  profiles: dev
+  application:
+    name: config-client
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+---
+server:
+  prot:8202
+spring:
+  profiles: test
+  application:
+    name: config-client
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
