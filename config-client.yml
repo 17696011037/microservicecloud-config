@@ -4,11 +4,11 @@
       -dev
 ---
 server:
-  port: 8201
+  port: 8200
 spring:
   profiles: dev
   application:
-    name: config-client
+    name: config-client-dev
 eureka:
   instance:
     hostname: localhost
